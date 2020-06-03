@@ -1,0 +1,22 @@
+.container {
+    max-width: 600px;
+    margin:auto;
+}
+
+h3,ul,form,.newtodo {
+    text-align: center;
+}
+ul {
+    list-style: none;
+    padding-left:0;
+}
+.newtodo {
+    display:flex;
+    height: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    padding-bottom:16px;
+}

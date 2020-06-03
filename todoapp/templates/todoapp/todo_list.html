@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Todolist</title>
+    <link rel="stylesheet" href="{% static 'todoapp/css/main.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h3>Todo list</h3>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="newtodo">
+                <input type="text" name="content">
+                <button>Add</button>
+            </div>
+        </form>
+
+        <form method="POST">
+            {% csrf_token %}
+            <ul class="container">
+                {% for todo in object_list %}
+                    <li>
+                        {% if todo.done %}
+                            <input type="checkbox" checked="True" name='{{todo.id}}'>
+                        {% else %}
+                            <input type="checkbox" name='{{todo.id}}'>
+                        {% endif %}
+                        <span>{{todo.content}}</span>
+                    </li>
+                {% endfor %}
+                <button>Done</button>
+            </ul>
+        </form>
+    </div>
+</body>
+</html>
