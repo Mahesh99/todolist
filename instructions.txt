@@ -1,0 +1,5 @@
+1. create a project todolist
+2. create an app inside it with name todoapp
+3. create a class based view inside views.py of todoapp with name Home extending ListView and add a path 'home/' in main urls.py file pointing to this view
+4. create model with name Todo with fields inside it content(CharField) and done(BooleanField). Register it in admin.py(to display in admin site). 
+5. create a template folder and inside template folder create todoapp.create todo_list.html template. Using for tag display todos from object_list({% for todo in object_list %} <your code to display todo list> {% endfor %}). Above for tag create an input element at the top with submit button to add a new todo(recall the todo app we created during the html/css sessions).

@@ -19,5 +19,6 @@ from todoapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.Home.as_view(), name="home")
+    path('',views.Home.as_view(), name="home"),
+    path('register/',views.RegisterView.as_view(), name="register"),
 ]
